@@ -1,19 +1,16 @@
-import { Layout } from "antd";
-import { createBrowserHistory } from "history";
-import React from "react";
+import React from 'react';
+import { Layout } from 'antd';
+import { renderRoutes } from 'react-router-config';
 
-import { IRouteConfig } from "@/router/config";
-
-const { Content } = Layout;
+import { IRouteConfig } from '@/router/modules';
 
 const BasicLayout: React.FC<{ route: IRouteConfig }> = ({ route }) => {
-  const history = createBrowserHistory();
-
-  if (!localStorage.getItem("vite-react-ts-antd-token")) {
-    history.push("/user/login");
-  }
-
-  return <div>UserLayout</div>;
+  return (
+    <div>
+      UserLayout
+      <div> {renderRoutes(route.routes)}</div>
+    </div>
+  );
 };
 
 export default BasicLayout;
