@@ -18,5 +18,5 @@
     "baseUrl": ".",
     "paths": { "@/*": ["src/render/*"] }
   },
-  "include": ["./src"]
+  "include": ["./src", "typings"]
 }

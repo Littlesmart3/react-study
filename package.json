@@ -4,6 +4,7 @@
   "homepage": "./",
   "main": "src/main/index.js",
   "scripts": {
+    "open": "scripty",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
