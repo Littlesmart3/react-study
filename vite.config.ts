@@ -7,17 +7,17 @@ import setAppEnv from './script/env';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react()
-    // vitePluginImp({
-    //   optimize: true,
-    //   libList: [
-    //     {
-    //       libName: 'antd',
-    //       libDirectory: 'es',
-    //       style: (name) => `antd/es/${name}/style`
-    //     }
-    //   ]
-    // })
+    react(),
+    vitePluginImp({
+      optimize: true,
+      libList: [
+        {
+          libName: 'antd',
+          libDirectory: 'es',
+          style: (name) => `antd/es/${name}/style`
+        }
+      ]
+    })
   ],
   server: {
     host: '0.0.0.0',
