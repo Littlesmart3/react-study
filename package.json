@@ -6,8 +6,6 @@
   "scripts": {
     "open": "scripty",
     "build": "scripty",
-    "dev": "vite",
-    "serve": "vite preview",
     "electron": "electron ."
   },
   "dependencies": {
