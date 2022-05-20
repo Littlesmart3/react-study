@@ -9,7 +9,5 @@ fi
 # 指定运行端口
 PORT=6800
 
-cross-env NODE_ENV=$1 PORT=$PORT vite
+cross-env NODE_ENV=$1 PORT=$PORT webpack-dev-server --open --config ./script/config/webpack.dev.js 
 
-# 并行执行两个命令
-# concurrently -n=vue,ele -c=green,blue "PORT=$PORT vite --force --mode $1" "PORT=$PORT node -r ts-node/register script/build-main --mode=$1 --watch"
