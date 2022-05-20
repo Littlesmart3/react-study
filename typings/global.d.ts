@@ -18,3 +18,8 @@ declare const __APP_ENV__: { ENV: string; BASE_URL: string };
  * @type prod 线上环境接口
  */
 declare const __APP_BASE_URL__: string;
+
+declare module '*.svg' {
+  const content: string;
+  export default content;
+}

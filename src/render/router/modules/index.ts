@@ -19,6 +19,12 @@ export interface IRouteConfig {
 
 // 路由数组
 const routers: IRouteConfig[] = [
+  {
+    path: '/login',
+    component: React.lazy(() => import('@/pages/login/index')),
+    title: '登陆模块',
+    routes: []
+  },
   User,
   {
     path: '/',

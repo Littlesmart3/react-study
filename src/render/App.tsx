@@ -1,8 +1,7 @@
 // App.tsx
 import React, { Suspense } from 'react';
-import '@/style.less';
-
 import Routers from '@/router/index';
+import '@/assets/less/index.less';
 
 const App = () => {
   return (
