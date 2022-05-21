@@ -39,19 +39,7 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: [
-          //   {
-          //     loader: MiniCssExtractPlugin.loader,
-          //     options: {
-          //       hmr: process.env.NODE_ENV === 'development',
-          //       reloadAll: true
-          //     }
-          //   },
-          MiniCssExtractPlugin.loader,
-          //   'style-loader',
-          'css-loader',
-          'less-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
       },
       {
         test: /\.(png|jpe?g|svg|gif)(\?.*)?$/,

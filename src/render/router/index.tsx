@@ -1,12 +1,21 @@
 import React from 'react';
-import { renderRoutes } from 'react-router-config';
-import { HashRouter } from 'react-router-dom';
-import routes, { IRouteConfig } from './modules';
+import { BrowserRouter, useRoutes } from 'react-router-dom';
+import NotFound from '@/pages/404';
+import UserRouter from './modules/user';
+import BasicRouter from './modules/basic';
 
-export interface RouteComponentConfig extends Omit<IRouteConfig, 'component' | 'routes'> {
-  routes?: RouteComponentConfig[];
-  component?: React.LazyExoticComponent<React.FC<Record<string, unknown>>>;
-}
+const GetRoutes = () => {
+  const routes = useRoutes([
+    BasicRouter, // 业务模块
+    UserRouter, // 用户模块
+    { path: '*', element: <NotFound /> } // 404
+  ]);
+  return routes;
+};
 
-const Router: React.FC = () => <HashRouter>{renderRoutes(routes)}</HashRouter>;
+const Router: React.FC = () => (
+  <BrowserRouter>
+    <GetRoutes />
+  </BrowserRouter>
+);
 export default Router;

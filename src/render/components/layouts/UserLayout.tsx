@@ -1,15 +1,7 @@
 import React from 'react';
-import { renderRoutes } from 'react-router-config';
 
-import { IRouteConfig } from '@/router/modules';
-
-const BasicLayout: React.FC<{ route: IRouteConfig }> = ({ route }) => {
-  return (
-    <div>
-      UserLayout
-      <div> {renderRoutes(route.routes)}</div>
-    </div>
-  );
+const UserLayout: React.FC = () => {
+  return <div>UserLayout</div>;
 };
 
-export default BasicLayout;
+export default UserLayout;

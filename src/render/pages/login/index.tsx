@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { BrowserHistory } from 'react-router-dom';
 import { message, Button, Input } from 'antd';
 import { UserOutlined, LockOutlined, PhoneOutlined } from '@ant-design/icons';
 import LoginSvg from '@/assets/img/login/login.svg';
@@ -8,7 +8,7 @@ import dayjs from 'dayjs';
 import './style.less';
 
 const Login: React.FC = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const [type, setType] = useState(false);
   const [signIn, setSignIn] = useState({ username: '', password: '' });
   const [signUp, setSignUp] = useState({ username: '', phone: '', password: '' });
@@ -30,7 +30,7 @@ const Login: React.FC = () => {
         expire_time: dayjs(new Date()).unix() + 86400,
         data: { name: signIn.username }
       });
-      history.push({ pathname: '/' });
+      // history.push({ pathname: '/' });
     } else {
       message.error('用户名或密码错误！');
     }
@@ -40,7 +40,7 @@ const Login: React.FC = () => {
   const signUpConfirm = () => {
     const { username, password } = signIn;
     if (username != '' && password == '') {
-      history.push({ pathname: '/' });
+      // history.push({ pathname: '/' });
     }
   };
 

@@ -9,5 +9,5 @@ fi
 # 指定运行端口
 PORT=6800
 
-cross-env NODE_ENV=$1 PORT=$PORT webpack-dev-server --open --config ./script/config/webpack.dev.js 
+cross-env NODE_ENV=$1 PORT=$PORT webpack-dev-server --config ./script/config/webpack.dev.js 
 
