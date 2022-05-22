@@ -8,8 +8,8 @@ const BasicRouter: RouteObject = {
   path: '/',
   element: <BasicLayout />,
   children: [
-    { path: '/home', element: <Home /> },
-    { path: '/about', element: <About /> }
+    { path: '', element: <Home /> },
+    { path: 'about', element: <About /> }
   ]
 };
 

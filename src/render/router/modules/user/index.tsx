@@ -8,7 +8,7 @@ const UserRouter: RouteObject = {
   path: '/user',
   element: <UserLayout />,
   children: [
-    { path: '/user/personalCenter', element: <PersonalCenter /> },
+    { path: '/user', element: <PersonalCenter /> },
     { path: '/user/editor', element: <Editor /> }
   ]
 };

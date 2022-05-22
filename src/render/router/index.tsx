@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter, useRoutes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, useRoutes } from 'react-router-dom';
+import LoginModule from '@/pages/login/index';
 import NotFound from '@/pages/404';
 import UserRouter from './modules/user';
 import BasicRouter from './modules/basic';
 
-const GetRoutes = () => {
+const GetRoutes: React.FC = () => {
   const routes = useRoutes([
+    { path: '/login', element: <LoginModule /> }, // 登录组册模块
     BasicRouter, // 业务模块
     UserRouter, // 用户模块
     { path: '*', element: <NotFound /> } // 404
@@ -14,8 +16,8 @@ const GetRoutes = () => {
 };
 
 const Router: React.FC = () => (
-  <BrowserRouter>
+  <HashRouter>
     <GetRoutes />
-  </BrowserRouter>
+  </HashRouter>
 );
 export default Router;
